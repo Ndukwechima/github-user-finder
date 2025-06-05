@@ -30,7 +30,6 @@ const root = ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Auth0Provider
       domain="dev-b8k2re1sdaqu33ze.us.auth0.com"
-      // clientId="GYsVn60CkUU6fa4yiwpRrT1KVL5KuzPh"
       clientId="TlntXh5oQEx5BRgsssK0xObmpZGy79Ra"
       authorizationParams={{ redirect_uri: window.location.origin }}
       cacheLocation="localstorage"
