@@ -1,7 +1,7 @@
 import React from 'react';
 import { GithubContext } from '../context/context';
 import styled from 'styled-components';
-import { GoRepo, GoGist } from 'react-icons/go';
+import { FaGithub } from "react-icons/fa";
 import { FiUsers, FiUserPlus } from 'react-icons/fi';
 
 const UserInfo = () => {
@@ -11,31 +11,31 @@ const UserInfo = () => {
   const items = [
     {
       id: 1,
-      icon: <GoRepo className='icon' />,
-      label: 'repos',
+      icon: <FaGithub className="icon" />, // use this icon for gists
+      label: "repos",
       value: public_repos,
-      color: 'pink',
+      color: "pink",
     },
     {
       id: 2,
-      icon: <FiUsers className='icon' />,
-      label: 'followers',
+      icon: <FiUsers className="icon" />,
+      label: "followers",
       value: followers,
-      color: 'green',
+      color: "green",
     },
     {
       id: 3,
-      icon: <FiUserPlus className='icon' />,
-      label: 'following',
+      icon: <FiUserPlus className="icon" />,
+      label: "following",
       value: following,
-      color: 'purple',
+      color: "purple",
     },
     {
       id: 4,
-      icon: <GoGist className='icon' />,
-      label: 'gists',
+      icon: <FaGithub className="icon" />, // use this icon for gists
+      label: "gists",
       value: public_gists,
-      color: 'yellow',
+      color: "yellow",
     },
   ];
 
