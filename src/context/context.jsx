@@ -31,8 +31,8 @@ const GithubProvider = ({ children }) => {
       const { login, followers_url } = response.data;
 
       await Promise.allSettled([
-        axios(`${rootUrl}/users/${login}/repos?per_page=100`),
-        axios(`${followers_url}?per_page=100`),
+        axios(`${rootUrl}/users/${login}/repos?per_page=50`),
+        axios(`${followers_url}?per_page=50`),
       ])
         .then((results) => {
           const [repos, followers] = results;
@@ -73,7 +73,7 @@ const GithubProvider = ({ children }) => {
   useEffect(checkRequests, []);
   // get initial user
   useEffect(() => {
-    searchGithubUser('john-smilga');
+    searchGithubUser('Ndukwechima');
   }, []);
   return (
     <GithubContext.Provider
